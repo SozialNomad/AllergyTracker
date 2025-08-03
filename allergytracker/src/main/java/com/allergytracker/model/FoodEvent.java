@@ -1,17 +1,24 @@
 package com.allergytracker.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.time.LocalDateTime;
+
 public class FoodEvent {
     private String name;
-    private long timeInBetween;
+    @JsonFormat()
+    private LocalDateTime time;
     private int id;
 
-    public FoodEvent(String name, long timeInBetween){
-        this.name = name;
-        this.timeInBetween = timeInBetween;
+    public FoodEvent(){
     }
-    public FoodEvent(String name, long timeInBetween, int id){
+    public FoodEvent(String name, LocalDateTime time){
         this.name = name;
-        this.timeInBetween = timeInBetween;
+        this.time = time;
+    }
+    public FoodEvent(String name, LocalDateTime time, int id){
+        this.name = name;
+        this.time = time;
         this.id = id;
     }
     public FoodEvent withId(int id){
@@ -22,8 +29,8 @@ public class FoodEvent {
     public String getName(){
         return name;
     }
-    public long getTimeInBetween(){
-        return timeInBetween;
+    public LocalDateTime getTime(){
+        return time;
     }
     public int getId(){
         return id;

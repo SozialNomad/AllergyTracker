@@ -2,10 +2,13 @@ package com.allergytracker.service;
 
 import com.allergytracker.model.FoodEvent;
 import com.allergytracker.model.SymptomEvent;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Service
 public class EventService {
     private final List<FoodEvent> foodEvents = new ArrayList<>();
     private final List<SymptomEvent> symptomEvents = new ArrayList<>();
