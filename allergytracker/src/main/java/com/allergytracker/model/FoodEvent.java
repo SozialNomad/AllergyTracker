@@ -1,4 +1,4 @@
-package com.allergytracker.allergytracker.model;
+package com.allergytracker.model;
 
 public class FoodEvent {
     private String name;
